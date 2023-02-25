@@ -1,0 +1,17 @@
+before_script:
+  - export PATH=$PATH:/usr/local/bin
+
+stages:
+  - cypress
+cypress:
+  stage: cypress
+  #  services:
+  #    - node:latest
+  #    - golang:1.10
+  image: cypress/base:10
+  script:
+    - npm install har-validator
+    - npm install  --save-dev cypress@6.0.1
+    - $(npm bin)/cypress run --record --key 9c65f15c-5065-4288-9560-4754c6052807
+  tags:
+    - k8s-stage

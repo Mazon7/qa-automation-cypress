@@ -1,0 +1,21 @@
+{
+  "name": "cypress-gitlab",
+  "version": "1.0.0",
+  "description": "cypress tests️",
+  "main": "index.js",
+  "private": true,
+  "scripts": {
+    "test": "cypress run"
+  },
+  "devDependencies": {
+    "cypress": "^9.7.0"
+  },
+  "dependencies": {
+    "bignumber.js": "^9.0.1",
+    "ccxt": "^1.57.98",
+    "har-validator": "^5.1.5",
+    "lodash": "^4.17.21",
+    "pg": "^8.7.3",
+    "soft-assert": "^0.2.4"
+  }
+}
