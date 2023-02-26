@@ -1,0 +1,5 @@
+{
+    "error": true,
+    "message": "Missing credentials",
+    "code": "invalid credentials"
+}

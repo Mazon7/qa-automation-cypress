@@ -1,0 +1,14 @@
+{
+  "name": "cypress-gitlab",
+  "version": "1.0.0",
+  "description": "cypress tests️",
+  "main": "index.js",
+  "private": true,
+  "scripts": {
+    "test": "cypress run"
+  },
+  "devDependencies": {
+    "cypress": "^11.1.0",
+    "cypress-otp": "^1.0.3"
+  }
+}

@@ -1,0 +1,49 @@
+before_script:
+  - export PATH=$PATH:/usr/local/bin
+
+stages:
+  - cypress
+
+# electron:
+#   stage: cypress
+#   #  services:
+#   #    - node:latest
+#   #    - golang:1.10
+#   image: cypress/browsers:node16.5.0-chrome94-ff93
+#   script:
+#     #    - npm install har-validator
+#     - npm install --save-dev cypress@10.7.0
+#     - npm i
+#     - $(npm bin)/cypress run -b electron --record --key 9e21c08a-6ab1-49ad-902e-3243c47b15c8
+#   tags:
+#     - k8s-stage
+
+chrome:
+  stage: cypress
+  image: cypress/browsers:node16.5.0-chrome94-ff93
+  script:
+    - npm install --save-dev cypress@10.7.0
+    - npm i
+    - $(npm bin)/cypress run -b chrome --record --key 9e21c08a-6ab1-49ad-902e-3243c47b15c8
+  tags:
+    - k8s-stage
+
+firefox:
+  stage: cypress
+  image: cypress/browsers:node16.5.0-chrome94-ff93
+  script:
+    - npm install --save-dev cypress@10.7.0
+    - npm i
+    - $(npm bin)/cypress run -b firefox --record --key 9e21c08a-6ab1-49ad-902e-3243c47b15c8
+  tags:
+    - k8s-stage
+
+edge:
+  stage: cypress
+  image: cypress/browsers:node16.5.0-edge88
+  script:
+    - npm install --save-dev cypress@10.7.0
+    - npm i
+    - $(npm bin)/cypress run -b edge --record --key 9e21c08a-6ab1-49ad-902e-3243c47b15c8
+  tags:
+    - k8s-stage
