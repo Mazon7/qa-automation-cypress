@@ -1,0 +1,17 @@
+before_script:
+  - export PATH=$PATH:/usr/local/bin
+
+stages:
+  - cypress
+cypress:
+  stage: cypress
+#  services:
+#    - node:latest
+#    - golang:1.10
+  image: cypress/base:10
+  script:
+    - npm i -g newman-reporter-htmlextra
+    - npm install
+    - $(npm bin)/cypress run --record --key 4bf6a86a-d799-47d2-b686-6bfcabd05099
+  tags: 
+    - cbo-test-runner

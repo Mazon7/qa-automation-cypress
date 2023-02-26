@@ -1,0 +1,32 @@
+{
+  "name": "cypress-gitlab",
+  "version": "1.0.0",
+  "description": "cypress tests️",
+  "main": "index.js",
+  "private": true,
+  "scripts": {
+    "test": "cypress run"
+  },
+  "devDependencies": {
+    "cypress": "^10.2.0",
+    "cypress-otp": "^1.0.3",
+    "cypress-postgres": "^1.1.1",
+    "cypress-wait-until": "^1.7.2",
+    "pg": "^8.7.3"
+  },
+  "dependencies": {
+    "async-test-util": "^2.0.0",
+    "async-wait-for-promise": "^1.2.0",
+    "async-wait-until": "^2.0.12",
+    "chai-json-schema": "^1.5.1",
+    "cypress-postgresql": "^1.0.8",
+    "cypress-waitfor": "^1.1.0",
+    "pg-promise": "^10.11.1",
+    "promise-wait-until": "^1.0.0",
+    "promises-utils.wait": "0.0.5",
+    "wait-condition": "^1.0.2",
+    "wait-for-expect": "^3.0.2",
+    "wait-for-throwable": "^1.0.1",
+    "wait-until": "0.0.2"
+  }
+}
