@@ -1,0 +1,19 @@
+{
+  "name": "cypress-gitlab",
+  "version": "1.0.0",
+  "description": "cypress tests️",
+  "main": "index.js",
+  "private": true,
+  "scripts": {
+    "test": "cypress run"
+  },
+  "devDependencies": {
+    "cypress": "^9.2.0"
+  },
+
+  
+  "dependencies": {
+    "@nuintun/qrcode": "^3.0.1",
+    "@faker-js/faker": "^6.3.1"
+  }
+}

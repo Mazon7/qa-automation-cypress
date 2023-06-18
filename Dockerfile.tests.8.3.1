@@ -1,0 +1,16 @@
+FROM cypress/browsers:node16.5.0-chrome94-ff93
+
+
+RUN export DEBIAN_FRONTEND=noninteractive ; \
+    apt-get --allow-releaseinfo-change  update && apt-get install -y chromium ffmpeg && \
+    wget https://packages.microsoft.com/repos/edge/pool/main/m/microsoft-edge-stable/microsoft-edge-stable_96.0.1054.43-1_amd64.deb && \
+    dpkg -i microsoft-edge-*_amd64.deb && \
+    wget https://get.geo.opera.com/ftp/pub/opera/desktop/82.0.4227.23/linux/opera-stable_82.0.4227.23_amd64.deb && \
+    dpkg -i opera-stable_*_amd64.deb
+
+#USER root
+
+WORKDIR /src
+
+RUN npm install -g npm@8.2.0 ; npm install -g browserslist@latest ; npm install -g --save-dev cypress@8.3.1
+#    npx browserslist@latest --update-db
